@@ -58,7 +58,7 @@
 	@enduml
 
 
-![enter image description here](https://github.com/Nagorniii/photo/blob/main/2.png?raw=true)
+(https://github.com/Nagorniii/photo/blob/main/2.png?raw=true)
 
 
 -   **Клас** **Monitor**: Включає атрибути, методи та взаємозв'язки з іншими класами. Наприклад, **mSpecifier**, **mInitMonitor**, **mOffered**, **mDebouncer**, **mEvent** — атрибути, що визначають стан класу. Основні методи, такі як **ReportMonitorAction**, **AttachEvent**, **Offer**, **StopOffer**, описують функціональність цього класу.
