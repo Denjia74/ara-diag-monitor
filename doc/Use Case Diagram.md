@@ -24,7 +24,7 @@
 	@enduml
 
 
-![enter image description here](https://github.com/Nagorniii/photo/blob/main/3.png?raw=true)
+![](https://github.com/Nagorniii/photo/blob/main/3.png?raw=true)
 
 
   **Актори**: У цьому прикладі три актори:
