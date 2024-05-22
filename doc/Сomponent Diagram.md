@@ -32,4 +32,4 @@
 	@enduml
 
 
-![enter image description here](https://raw.githubusercontent.com/Nagorniii/photo/1d8daf51804e9880ec21f2ed930fde3c7e098dfe/1.png)
+![](https://raw.githubusercontent.com/Nagorniii/photo/1d8daf51804e9880ec21f2ed930fde3c7e098dfe/1.png)
