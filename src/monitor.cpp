@@ -1,5 +1,5 @@
 #include "./monitor.h"
-#include "./diag_error_domain.h"
+#include "../include/diag_error_domain.h"
 
 namespace ara
 {
@@ -39,7 +39,7 @@ namespace ara
                     &Monitor::onEventStatusChanged, this, std::placeholders::_1)};
 
             mDebouncer =
-                new debouncing::CounterBasedDebouncer(_callback, defaultValues);
+                debouncing::CounterBasedDebouncer(_callback, defaultValues);
         }
 
         Monitor::Monitor(
@@ -52,7 +52,7 @@ namespace ara
                     &Monitor::onEventStatusChanged, this, std::placeholders::_1)};
 
             mDebouncer =
-                new debouncing::TimerBasedDebouncer(_callback, defaultValues);
+                debouncing::TimerBasedDebouncer(_callback, defaultValues);
         }
 
         void Monitor::ReportMonitorAction(MonitorAction action)

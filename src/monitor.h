@@ -2,11 +2,11 @@
 #define MONITOR_H
 
 #include <functional>
-#include "../core/instance_specifier.h"
-#include "../core/result.h"
-#include "./debouncing/counter_based_debouncer.h"
-#include "./debouncing/timer_based_debouncer.h"
-#include "./event.h"
+#include "../include/instance_specifier.h"
+#include "../include/result.h"
+#include "../include/counter_based_debouncer.h"
+#include "../include/timer_based_debouncer.h"
+#include "../include/event.h"
 
 namespace ara
 {
@@ -42,7 +42,7 @@ namespace ara
             const core::InstanceSpecifier &mSpecifier;
             const std::function<void(InitMonitorReason)> mInitMonitor;
             bool mOffered;
-            debouncing::Debouncer *mDebouncer;
+            debouncing::Debouncer mDebouncer;
             Event *mEvent;
 
             Monitor(
