@@ -76,12 +76,6 @@
 | Latency              | < 1 ms for state reporting                      |
 | Resource Utilization | CPU: < 5%, Memory: < 1 MB                       |
 
-#### Charts
-
-### Graphical User Interface
-
-## Sequence Diagrams {#seq}
-
 ## Data Structures {#dd}
 
 ### Enums

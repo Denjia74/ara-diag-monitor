@@ -78,20 +78,3 @@
 а DM наразі не готовий обробити кваліфікацію події, про яку повідомляється,
 то DM повинен закешувати принаймні один кваліфікований результат **PASSED** та кваліфікований результат **FAILED** 
 і обробити кваліфікований результат **FAILED/PASSED**, коли з'єднання з демоном (daemon) буде повторно встановлено.
-
-**[SWS_DM_01731]** Генерація MultipleMonitor MonitorHandleType.
-
-Деталі:
-Тип *MonitorHandleType* - це числове значення, створене за наступними правилами:
- * Якщо *DiagnosticMultipleMonitorPortMapping.overrideId* не існує, то в алфавітному порядку короткої назви *DiagnosticEvent* DM присвоює першому *DiagnosticEvent* номер *0x010000* і збільшує цей номер для кожного наступної *DiagnosticEvent*.
- * Якщо *DiagnosticMultipleMonitorPortMapping.overrideId* існує, то замість нього слід використовувати номер *idOverride*.
- * Якщо автоматично створений номер збігається з попередньо налаштованим значенням *idOverride*, буде обрано наступне вільне значення.
-
-**[SWS_DM_01732]** Не підтримуваний MonitorHandleType.
-
-Деталі:
-Якщо викликається будь-який метод *ara::diag::MultipleMonitor*, окрім дії з вхідним параметром *monitorHandle*,
-і цей екземпляр *MultipleMonitor* не відобразив *DiagnosticMultipleMonitorPortMapping*,
-який би створив наданий тип *MonitorHandleType*,
-то DM повертає kInvalidArgument.
-
