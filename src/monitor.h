@@ -42,7 +42,7 @@ namespace ara
             const core::InstanceSpecifier &mSpecifier;
             const std::function<void(InitMonitorReason)> mInitMonitor;
             bool mOffered;
-            debouncing::Debouncer mDebouncer;
+            debouncing::Debouncer* mDebouncer;
             Event *mEvent;
 
             Monitor(

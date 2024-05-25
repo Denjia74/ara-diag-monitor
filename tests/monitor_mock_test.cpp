@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include "monitor.h"
+#include "../src/monitor.h"
 
 using namespace testing;
 

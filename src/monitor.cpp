@@ -38,8 +38,7 @@ namespace ara
                 std::bind(
                     &Monitor::onEventStatusChanged, this, std::placeholders::_1)};
 
-            mDebouncer =
-                debouncing::CounterBasedDebouncer(_callback, defaultValues);
+            mDebouncer = new debouncing::CounterBasedDebouncer(_callback, defaultValues);
         }
 
         Monitor::Monitor(
@@ -51,8 +50,7 @@ namespace ara
                 std::bind(
                     &Monitor::onEventStatusChanged, this, std::placeholders::_1)};
 
-            mDebouncer =
-                debouncing::TimerBasedDebouncer(_callback, defaultValues);
+            mDebouncer = new debouncing::TimerBasedDebouncer(_callback, defaultValues);
         }
 
         void Monitor::ReportMonitorAction(MonitorAction action)

@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "monitor.h"
-#include "event.h"
+#include "../src/monitor.h"
+#include "../include/event.h"
 
 // Integration test fixture for Monitor and Event classes
 class MonitorEventIntegrationTest : public testing::Test {
