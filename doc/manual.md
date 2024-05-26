@@ -42,20 +42,28 @@
    ```
 ### Building and Running the Tests
 
-#### Using `g++` (for simplicity)
+#### Using CMake (recommended)
 
-1. **Compile and link the tests**:
+1. **Clone the repository**:
     ```bash
-    g++ -std=c++14 -I/path/to/gtest/include -I/path/to/gmock/include -L/path/to/gtest/lib -lgtest -lgtest_main -lgmock -lgmock_main tests/monitor_unit_test.cpp -o monitor_unit_test
-    g++ -std=c++14 -I/path/to/gtest/include -I/path/to/gmock/include -L/path/to/gtest/lib -lgtest -lgtest_main -lgmock -lgmock_main tests/monitor_mock_test.cpp -o monitor_mock_test
-    g++ -std=c++14 -I/path/to/gtest/include -I/path/to/gmock/include -L/path/to/gtest/lib -lgtest -lgtest_main -lgmock -lgmock_main tests/monitor_integration_test.cpp -o monitor_integration_test
+    git clone <repository_url>
+    cd ara-diag-monitor
+
     ```
 
-2. **Run the tests**:
+2. **Configure the build with CMake**:
     ```bash
-    ./monitor_unit_test
-    ./monitor_mock_test
-    ./monitor_integration_test
+    cmake -S . -B build
+    ```
+
+3. **Build the project**:
+    ```bash
+    cmake --build build
+    ```
+
+4. **Run the tests**:
+    ```bash
+    ./build/runTests
     ```
 
 ### Understanding the Tests
