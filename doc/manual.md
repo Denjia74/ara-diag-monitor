@@ -68,31 +68,6 @@
 
 ### Understanding the Tests
 
-#### Integration Tests
-- **File**: `monitor_integration_test.cpp`
-- **Purpose**: Перевіряє взаємодію між класами `Monitor` та `Event`.
-- **Example**:
-  ```cpp
-  // Test that verifies Monitor reports a 'kPassed' action and checks Event's fault detection counter
-  TEST_F(MonitorEventIntegrationTest, MonitorEventInteractionTest) {
-      monitor.ReportMonitorAction(MonitorAction::kPassed);
-      EXPECT_EQ(1, event.GetFaultDetectionCounter());
-  }
-  ```
-
-#### Mock Tests
-- **File**: `monitor_mock_test.cpp`
-- **Purpose**: Використовує GoogleMock для перевірки взаємодії з класом `Event`.
-- **Example**:
-  ```cpp
-  // Test that verifies the AttachEvent function in Monitor class
-  TEST_F(MonitorTest, AttachEventTest) {
-      Monitor monitor;
-      monitor.AttachEvent(mockEvent.get());
-      EXPECT_EQ(mockEvent.get(), monitor.GetEvent());
-  }
-  ```
-
 #### Unit Tests
 - **File**: `monitor_unit_test.cpp`
 - **Purpose**: Перевіряє окремі функціональні можливості класу `Monitor`.
@@ -126,29 +101,6 @@
 ```bash
 rm -rf build
 ```
-
-#### Using `CMake` (for more complex projects)
-
-1. **Створення папки build**:
-   ```bash
-   mkdir build
-   cd build
-   ```
-
-2. **Запуск CMake для генерації build файлів**:
-   ```bash
-   cmake ..
-   ```
-
-3. **Компіляція проєкту**:
-   ```bash
-   cmake --build .
-   ```
-
-4. **Запуск тестів**:
-   ```bash
-   ctest
-   ```
 
 ### Conclusion
 
